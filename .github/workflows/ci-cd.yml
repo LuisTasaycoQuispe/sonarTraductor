@@ -18,7 +18,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/traductor:v${{ env.VERSION }} .
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/traductor_front:v${{ env.VERSION }} .
 
       - name: Docker Hub Login
         env:
@@ -28,4 +28,4 @@ jobs:
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/traductor:v${{ env.VERSION }}
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/traductor_front:v${{ env.VERSION }}
